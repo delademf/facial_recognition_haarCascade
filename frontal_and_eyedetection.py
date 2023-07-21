@@ -1,5 +1,6 @@
 import cv2 as cv
 
+#resize the captured video
 def rescaleframe(frame,scale=0.75):
     width=int(frame.shape[1]*0.5)
     height=int(frame.shape[0]*0.5)
@@ -10,7 +11,7 @@ def rescaleframe(frame,scale=0.75):
 haar_cascade= cv.CascadeClassifier('haar_frontal.xml')
 haar_cascade_eye= cv.CascadeClassifier('haar_frontaleye.xml')
 
-capture = cv.VideoCapture(r'C:\Users\Dela\Desktop\opencv course\videes\Building a Neural Network with PyTorch in 15 Minutes _ Coding Challenge.mp4')
+capture = cv.VideoCapture(0)
 
 while True:
     isTrue,frame = capture.read()
